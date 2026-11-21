@@ -8,13 +8,14 @@ def main_loop():
         print("you havent entered one of these below:\n1_the command\n2_the city")
         main_loop()
 
-    a = command[0]
+    city_name = command[0]
+    choice = command[1]
 
-    if a == "qt":
+    if choice.lower() == "qt" or a.lower() == "quit":
         print("thanks for using our app")
         return
     
-    if a == "gw" and len(command) >= 2:
+    if choice.lower() == "gw" and len(command) >= 2:
         city = " ".join(command[1:])
         get_weather(city)
 
