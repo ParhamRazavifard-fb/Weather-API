@@ -49,10 +49,14 @@ def weather_api_pannel(city) :
                 
             elif func_choice == 4 :
                 def favorit_list() :
-                    pass
+                    print(f"this is your favorit cities  you saved before : ")
+                    print(favorits_list, end= " _ ")
                 
             elif func_choice == 5 :
                 def find_city() :
+                    user_choice = input("Enter the city you want to check in favorite list : ")
+                    if user_choice in favorits_list :
+                        print(f"{user_choice} containes in favorit list . ")
                     pass
                 
 
